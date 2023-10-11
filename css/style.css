@@ -1,5 +1,11 @@
 :root {
-
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 }
 
 * {
@@ -24,10 +30,189 @@ body {
   margin: 0;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 3em;
+}
+
+header nav {
+  margin-left: auto;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  padding-left: 1em;
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #222;
+}
+
+a {
+  font-size: var(--font-size-md);
+  font-weight: bold;
+}
+
+p {
+  font-size: var(--font-size-lg);
+}
+
+em {
+  font-size: var(--font-size-lg);
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+  font-weight: normal;
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+h4 {
+  font-size: var(--font-size-md);
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: var(--font-size-md);
+  font-weight: normal;
+}
+
+footer {
+  text-align: center;
+  padding-top: 5em;
+}
+
+.quotes {
+  background-color: black;
+  padding: 3em;
+  text-align: center;
+}
+
+.quotes > div {
+  color: #fff;
+}
+
+.behind {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.wrapper{
+  padding: 2em;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-areas: 
+    "item1 item1 item1"
+    "item2 item3 item4"
+    "item5 item5 item5";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5em;
+}
+
+#product-1{
+  grid-area: item1;
+}
+
+#product-2{
+  grid-area: item2;
+}
+
+#product-3{
+  grid-area: item3;
+}
+
+#product-4{
+  grid-area: item4;
+}
+
+#valentine{
+  grid-area: item5;
+}
+
+.grid-2 {
+  display: grid;
+}
+
+.grid-3 {
+  display: grid;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+}
+
+.grid-4 > div > p {
+  text-align: center;
+}
+
+@media (min-width: 48em){
+  .grid-1 {
+    grid-template-areas: 
+    "item1 item2"
+    "item3 item4"
+    "item5 item5";
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10em;
+    text-align: left;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+  }
+}
+
+@media (min-width: 60em){
+  .grid-1 {
+    grid-template-areas: 
+    "item1 item2 item5"
+    "item3 item4 item5";
+  }
+  }
+
+.button {
+  color: #fff;
+  background-color: black;
+  border-radius: .5em;
+	display: inline-block;
+	text-decoration: none;
+	padding: 1em
+}
+
 img {
   display: block;
   max-width: 100%;
+  border-radius: 1em;
 }
-
 
 
